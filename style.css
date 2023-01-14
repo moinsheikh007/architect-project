@@ -1,0 +1,239 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+    list-style: none;
+    text-decoration: none;
+}
+body {
+    background: #ffffff;
+    overflow-x: hidden;
+}
+
+/* === Header Section === */
+
+header {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    right: o;
+    z-index: 1000;
+    background: #ffffff;
+    box-shadow: 0 50px 75px rgba(0,0,0,0.1);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 10%;
+    transition: 0.6s;
+}
+.logo {
+    font-size: 2rem;
+    font-weight: 600;
+    color: #000;
+    letter-spacing: 3px;
+}
+span {
+    color: #eb2f06;
+}
+.desktop-navbar {
+    display: flex;
+}
+.desktop-navbar a {
+    display: inline-block;
+    color: #000;
+    font-size: 1.1rem;
+    font-weight: 500;
+    padding: 7px 25px;
+    margin: 0 5px;
+    transition: 0.6s;
+}
+.desktop-navbar a:hover {
+    background: #eba306;
+    transform: scale(0.9);
+    border-radius: 5px;
+}
+.mobile-navbar {
+    display: none;
+}
+
+/* ===== Home Section ===== */
+
+section {
+    padding: 100px 10%;
+}
+.home {
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    align-items: center;
+    gap: 2.5rem;
+    text-align: center;
+}
+.home-text h1 {
+    font-size: 7vmin;
+    width: 50%;
+    margin: 0 auto;
+    padding-top: 10px;
+}
+.home-image img {
+    width: 100%;
+    height: auto;
+    transition: 0.6s;
+}
+.home-image img:hover {
+    transform: translateY(-10px);
+}
+.home-text p {
+    font-size: 1rem;
+    margin: 20px 0;
+}
+.btn {
+    display: inline-block;
+    color: #000;
+    font-size: 1.1rem;
+    padding: 8px 25px;
+    background: #eba306;
+    border-radius: 5px;
+    transition: 0.6s;
+}
+.btn:hover {
+    transform: scale(0.9);
+}
+
+/* ===== About Section ===== */
+
+.about {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3rem;
+    align-items: center;
+}
+.about-image {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5em;
+    align-items: center;
+}
+.about-image img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+.about-text h1 {
+    font-size: 7vmin;
+    letter-spacing: 4px;
+    font-weight: 800;
+    margin-bottom: 20px;
+}
+.about-text p {
+    font-size: 1.1rem;
+    margin-bottom: 30px;
+}
+
+/* ==== Services Section ===== */
+
+.services {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3rem;
+    position: relative;
+    /* align-items: center; */
+}
+.service-title h1{
+    font-size: 7vmin;
+    margin-bottom: 10px;
+    padding-left: 20px;
+    border-left: 5px solid #eb2f06;
+}
+.service-title p {
+    margin-bottom: 30px;
+}
+.service {
+    margin-bottom: 40px;
+    padding: 0 20px;
+}
+.service h3 {
+    margin-bottom: 5px;
+}
+
+.service-image img {
+    width: 100%;
+}
+.experience {
+    position: absolute;
+    bottom: 12.5%;
+    left: 45%;
+    background: #eba306;
+    padding: 30px 50px;
+    border-radius: 10px;
+    text-align: center;
+}
+.experience h2 {
+    font-size: 1.7rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ====== Mobile Device ====== */
+@media only screen and (max-width: 576px){
+    .desktop-navbar {
+        display: none;
+    }
+    .mobile-navbar {
+        display: block;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        width: 100%;
+        padding: 10px 0;
+        background: #9b8b8b;
+        box-shadow: 0 50px 75px rgba(0,0,0,0.1);
+    }
+    .mobile-navbar i {
+        font-size: 25px;
+        color: #000;
+        transition: 0.6s;
+    }
+    .mobile-navbar i:hover {
+        transform: scale(0.9);
+        /* background: #eba306; */
+    }
+    /* === Top aa Emoji Add Korte Chaiselam,, Pari Na ==== */
+    /* .emoji p{
+        position: fixed;
+        top: 0;
+        right: o;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        font-size: 2rem;
+    } */
+
+    .home-text h1 {
+        font-size: 5vmin;
+    }
+    .about {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        text-align: center;
+    }
+    .services {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+}
