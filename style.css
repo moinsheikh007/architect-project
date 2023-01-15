@@ -119,6 +119,10 @@ section {
     width: 100%;
     height: auto;
     object-fit: cover;
+    transition: 0.6s;
+}
+.about-image img:hover {
+    transform: scale(0.9);
 }
 .about-text h1 {
     font-size: 7vmin;
@@ -296,6 +300,63 @@ section {
     padding: 20px 0;
 }
 
+/* ===== Our Team Section ===== */
+.team {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, auto));
+    gap: 3rem;
+    text-align: center;
+    align-items: center;
+
+}
+.team-box {
+    padding: 10px;
+    position: relative;
+    overflow: hidden;
+    transition: 0.6s;
+}
+.team-box img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    transition: 0.6s;
+}
+.team-box img:hover{
+    transform: scale(0.9);
+}
+.team-title {
+    position: absolute;
+    width: 100%;
+    height: 0;
+    left: 0;
+    bottom: 0;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: 0.6s;
+}
+.team-box:hover .team-title {
+    height: 100%;
+}
+.team-title h2{
+    color: #fff;
+    margin-bottom: 10px;
+}
+.team-title p {
+    color: #fff;
+}
+.t-title {
+    text-align: center;
+    margin-bottom: 50px;
+}
+.t-title h1 {
+    font-size: 7vmin;
+    margin-bottom: 15px;
+}
+
+
 
 
 
@@ -312,7 +373,7 @@ section {
         left: 0;
         display: flex;
         align-items: center;
-        justify-content: space-around;
+        justify-content: space-evenly;
         width: 100%;
         padding: 10px 0;
         background: #9b8b8b;
@@ -322,6 +383,13 @@ section {
         font-size: 25px;
         color: #000;
         transition: 0.6s;
+        width: 40px;
+        height: 40px;
+        background: transparent;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
     }
     .mobile-navbar i:hover {
         transform: scale(0.9);
@@ -359,5 +427,55 @@ section {
         flex-direction: column;
         align-items: center;
         justify-content: center;
+        padding: 15px 25px;
+    }
+    .experience h2 {
+        font-size: 1.5rem;
+    }
+    .fact-title {
+        width: 100%;
+        text-align: center;
+    }
+    .copyright {
+        margin-bottom: 30px;
     }
 }
+
+/* ===== Tablet Device ====== */
+ @media only screen and (max-width: 768px) and (min-width: 578px){
+    header {
+        padding: 5px 2%;
+    }
+    .desktop-navbar a {
+        font-size: 16px;
+        padding: 5px 15px;
+        margin: 0 5px;
+    }
+    .about {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .about-image {
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+    }
+    .about-text {
+        text-align: center;
+    }
+    .services {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .experience {
+        position: absolute;
+        bottom: 105px;
+        left: 35%;
+    }
+    .logo {
+        font-size: 1.7rem;
+    }
+    .fact-title {
+        width: 100%;
+        text-align: center;
+    }
+ }
