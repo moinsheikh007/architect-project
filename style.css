@@ -349,6 +349,15 @@ section {
     }
     .services {
         display: flex;
-        flex-direction: column-reverse;
+        flex-direction: column;
+    }
+    .experience {
+        position: absolute;
+        left: 30%;
+        bottom: 110px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
     }
 }
