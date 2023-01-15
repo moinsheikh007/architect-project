@@ -479,3 +479,31 @@ section {
         text-align: center;
     }
  }
+
+ /* ===== Large Tablet ====== */
+ @media only screen and (max-width: 992px) and (min-width: 769px){
+    .about {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .about-image {
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+    }
+    .about-text {
+        text-align: center;
+    }
+    .services {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .experience {
+        position: absolute;
+        bottom: 105px;
+        left: 35%;
+    }
+    .fact-title {
+        width: 100%;
+        text-align: center;
+    }
+ }
